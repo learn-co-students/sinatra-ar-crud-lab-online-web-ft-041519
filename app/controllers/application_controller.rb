@@ -17,5 +17,26 @@ class ApplicationController < Sinatra::Base
 
   get "/articles" do
     @articles = Article.all
+
+    :index
+  end
+
+  get "/articles/:id" do
+
+
+    erb :show
+  end
+
+  get '/articles/:id/edit' do
+
+    erb :edit
+  end
+
+  patch '/articles/:id' do
+
+  end
+
+  delete '/articles/:id' do
+
   end
 end
