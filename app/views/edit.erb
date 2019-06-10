@@ -2,8 +2,8 @@
 <p><%= @article.content %></p>
 
 
-<form method="post" action="patch '/articles/:id'">
-  <input id="hidden" type="hidden" name="_method" value="PATCH">
+<form method="post" action="/articles/<%= @article.id %>">
+  <input id="hidden" type="hidden" name="_method" value="patch">
   <label for="title">Title: </label>
   <input type="text" name="[title]" id="title">
   <label for="content">Content: </label>
