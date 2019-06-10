@@ -36,6 +36,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/:id/edit' do
+    @article = Article.find_by(id: params[:id])
 
     erb :edit
   end
@@ -45,6 +46,6 @@ class ApplicationController < Sinatra::Base
   end
 
   delete '/articles/:id' do
-
+    erb :index
   end
 end
